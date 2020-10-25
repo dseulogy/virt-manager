@@ -1,4 +1,8 @@
-sudo pacman -S qemu virt-manager edk2-ovmf dnsmasq ebtables bridge-utils
+$ sudo pacman -S qemu virt-manager edk2-ovmf dnsmasq ebtables bridge-utils
+
+$ sudo systemctl enable libvirtd
+
+$ sudo systemctl start libvirtd
 
 $ sudo nano br10.xml
 
@@ -20,7 +24,9 @@ $ sudo nano br10.xml
 -------------------------------------------------------------
 
 $ sudo virsh net-define  br10.xml
+
 $ sudo virsh net-start br10
+
 $ sudo virsh net-autostart br10
 
-$ sudo gpasswd -a user libvirt
+$ sudo gpasswd -a username libvirt

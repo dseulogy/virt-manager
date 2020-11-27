@@ -30,3 +30,5 @@ $ sudo virsh net-start br10
 $ sudo virsh net-autostart br10
 
 $ sudo gpasswd -a username libvirt
+
+$ sudo virsh net-destroy br10
